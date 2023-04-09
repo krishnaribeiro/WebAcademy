@@ -1,0 +1,33 @@
+body {
+width: 60%;
+background-color: rgb(243,186,167);
+margin: 0 auto;
+}
+p {
+    width: 70%;
+    font-family: Arial;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 15%;
+}
+li {
+    font-family:'Times New Roman';
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4;
+    list-style: none;
+}
+#wrap h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+    height: 50%;
+    font-family: 'Times New Roman', Times, serif;
+}
+.line {
+border-bottom: black dashed 5px;
+}
+span {
+font-size: 15pt;
+font-weight: 600;
+}
