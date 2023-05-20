@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 4</title>
+        <link rel="stylesheet" href="Questao4.css">
+    </head>
+    <body>
+        
+        <div class="estufa">
+            <ul class="frutas">
+           <li>Abacate</li>
+           <li>Banana</li>
+           <li>Caqui</li>
+           <li>Laranja</li>
+           <li>Melão</li>
+           </ul>
+           <ul class="verduras">
+           <li>Aipo</li>
+           <li>Alface</li>
+           <li>Brócolis</li>
+           <li>Couve</li>
+           <li>Espinafre</li>
+           </ul>
+           <ul class="Legumes">
+           <li>Abóbora</li>
+           <li>Batata</li>
+           <li>Cenoura</li>
+           <li>Mandioca</li>
+           </ul>
+           <ul class="flores">
+           <li>Acácia</li>
+           <li>Flor de Lótus</li>
+           <li>Rosa Branca</li>
+           </ul>
+           </div>
+           
+        <script>
+            const estufa = document.querySelector('.estufa');
+            console.log(estufa);
+
+            const verduras = estufa.querySelector('.verduras');
+            console.log(verduras);
+
+            const verdurasList = estufa.querySelectorAll('.verduras li');
+            console.log(verdurasList);
+
+            const frutas = estufa.querySelector('.frutas');
+            console.log(frutas.children);
+
+            const caqui = verduras.querySelector(':nth-child(3)');
+            console.log(caqui.textContent);
+
+            const acacia = estufa.querySelector('.flores :nth-child(1)');
+            const flores = acacia.parentElement;
+            console.log(flores);
+            
+            const rosaBranca = estufa.querySelector('.flores :nth-child(3)');
+            const estufaElement = rosaBranca.closest('.estufa');
+            console.log(estufaElement);
+
+            const batata = estufa.querySelector('.Legumes li:nth-child(2)');
+            const cenoura = batata.nextElementSibling;
+            console.log(cenoura.textContent);
+
+            const abobora = batata.previousElementSibling;
+            console.log(abobora.textContent);
+
+            const mandioca = batata.parentElement.querySelector(':last-child');
+            console.log(mandioca.textContent);
+
+        </script>
+    </body>
+</html>
+
+

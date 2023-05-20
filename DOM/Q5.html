@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+    <title>Sobre Mim</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .listItem {
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+        <h1> Sobre Mim </h1>
+        <ul>
+            <li>Nome Completo: <span id="fullname">Montero Lamar Hill</span></li>
+            <li>Idade: <span id="age">24 anos</span></li>
+            <li>Cidade Natal: <span id="hometown">Lithia Springs</span></li>
+        </ul>
+
+        <script>
+            var listItems = document.querySelectorAll("li");
+            
+            for (var i = 0; i < listItems.length; i++) {
+                listItems[i].classList.add("listItem");
+            }
+        </script>
+
+    </body>
+</html>

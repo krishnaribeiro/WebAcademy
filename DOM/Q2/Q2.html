@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questao 2</title>
+        <link rel="stylesheet" href="Questao2.css">
+    </head>
+    <body>
+        
+        <p>
+            Mary Kenneth Keller foi uma freira e também a primeira mulher a
+            conquistar um doutorado em Ciências da Computação.
+        </p>
+        <p>
+            A britânica Ada Lovelace foi a primeira programadora da história,
+            criando o primeiro algoritmo capaz de ser processado por uma
+            máquina.
+        </p>
+        <p>
+            Grace Hopper é que foi por causa dela que começamos a chamar as
+            falhas de “bug”.
+        </p>
+        <p>
+            A Carol Shaw foi a primeira mulher a desbravar o universo dos
+            games, na década de 70.
+        </p>
+
+        <script>
+            const paragraph_1 = document.querySelector('p');
+            console.log(paragraph_1);
+            const paragraph_2 = document.getElementsByTagName('p')[0];
+            console.log(paragraph_2);
+
+            const ids = ['one', 'two', 'three', 'four'];
+            const paragraph_nodelist = document.getElementsByTagName('p');
+            for (let i = 0; i < paragraph_nodelist.length; i++) {
+                paragraph_nodelist[i].setAttribute('id', ids[i]);
+                paragraph_nodelist[i].classList.add('paragraph');
+                if (i == paragraph_nodelist.length - 2){
+                    paragraph_nodelist[i].style.backgroundColor ='blue';
+                }
+                paragraph_nodelist[i].style.fontFamily = 'MonoSpace';
+                paragraph_nodelist[i].style.fontSize = '14pt';
+                paragraph_nodelist[i].style.border = '8px solid pink';
+
+            }
+            const updated_paragraph_nodelist = document.getElementsByTagName('p');
+        </script>
+    </body>
+</html>
+
+
