@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uma página Web</title>
+        <meta name="keyword" content="HTML, CSS, JS, Exemplo">
+        <meta name="description" content="Uma página Web">
+        <meta name="author" content="Krishna">
+    </head>
+    <body>
+        <p id="demo"></p>
+
+        <script>
+            function person(firstName,lastName,age,eyecolor) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.eyecolor = eyecolor;
+                this.changeName = function (name) {
+                    this.lastName = name;
+                    console.log(myMother.lastName)
+                    document.write(myMother.lastName);
+                    window.alert(myMother.lastName);
+                }
+            }
+            var myMother = new person("Sally", "Rally", 48, "green");
+            myMother.changeName("Doe");
+            document.getElementById("demo").innerHTML = "My mother's last name is " + myMother.lastName;
+        </script>
+    </body>
+
+</html>

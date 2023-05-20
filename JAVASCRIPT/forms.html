@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta name="description" content="Um questionário">
+        <meta name="author" content="Krishna">
+        
+        <script>
+            function avaliar(){
+                var nota = 0;
+                var respostasCertas = ["Interestelar", "Ratatouille", "Detroit: Become Human", "Lil Nas X", "Chico Buarque", "Modern Family"]
+                for (let index=1; index <=6; index++) {
+                    var perguntas = "pergunta"+index;
+                    var input = document.getElementsByName(perguntas);
+                    for (let j = 0; j < input.length; j++) {
+                        if (input.length > 0 && input[j].checked && input[j].value === respostasCertas[index-1]) {
+                            nota++;
+                        }
+                    }
+                }
+                document.getElementById("resultado").innerHTML = "Você acertou "+nota+" de 6"
+                return false;
+            }
+        </script>
+        
+    </head>
+    <body>
+        <form>
+            <p>Qual o melhor filme de todos os tempos?</p>
+            <label>
+                <input type="radio" name="pergunta1" value="Blade Runner"> Blade Runner
+            </label>
+            <label>
+                <input type="radio" name="pergunta1" value="Interestelar"> Interestelar
+            </label>
+            <p>Qual o melhor filme de animação de todos os tempos?</p>
+            <label>
+                <input type="radio" name="pergunta2" value="Shrek"> Shrek
+            </label>
+            <label>
+                <input type="radio" name="pergunta2" value="Ratatouille"> Ratatouille
+            </label>
+            <p>Qual o melhor jogo de todos os tempos?</p>
+            <label>
+                <input type="radio" name="pergunta3" value="Detroit: Become Human"> Detroit: Become Human 
+            </label>
+            <label>
+                <input type="radio" name="pergunta3" value="God of War"> God of War
+            </label>
+            <p>Qual o melhor rapper da atualidade?</p>
+            <label>
+                <input type="radio" name="pergunta4" value="Lil Nas X"> Lil Nas X
+            </label>
+            <label>
+                <input type="radio" name="pergunta4" value="Drake"> Drake
+            </label>
+            <p>Qual o melhor cantor brasileiro de todos os tempos?</p>
+            <label>
+                <input type="radio" name="pergunta5" value="Chico Buarque"> Chico Buarque
+            </label>
+            <label>
+                <input type="radio" name="pergunta5" value="Renato Russo"> Renato Russo
+            </label>
+            <p>Qual o melhor série de todos os tempos?</p>
+            <label>
+                <input type="radio" name="pergunta6" value="Greys Anatomy"> Greys Anatomy
+            </label>
+            <label>
+                <input type="radio" name="pergunta6" value="Modern Family"> Modern Family
+            </label>
+            <button onclick="return avaliar()">Checar</button>
+            <h2 id="resultado"></h2>
+        </form>
+    </body>
+</html>

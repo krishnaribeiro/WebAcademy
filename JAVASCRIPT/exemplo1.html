@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uma pagina Web</title>
+        <meta name="keywords" content="HTML, CSS, JS, Exemplo">
+        <meta name="description" content="Uma página Web">
+        <meta name="author" content="Krishna">
+        
+        <script>
+            function myFunction1()
+            {
+                document.getElementById("p1").innerHTML = "Java Script no Head";
+            }
+        </script>
+    </head>
+    <body>
+        <p id = "p1"></p>
+        <p id = "p2"></p>
+        <p id = "p3"></p>
+        <button type="button" onclick="myFunction1()">Ativar JS Head</button>
+        <button type="button" onclick="myFunction2()">Ativar JS Externo</button>
+        <script>
+            document.getElementById("p2").innerHTML = "Java Script no Body";
+        </script>
+        <script src="exemplo.js"></script>
+    </body>
+</html>

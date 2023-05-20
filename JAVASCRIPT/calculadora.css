@@ -1,0 +1,34 @@
+form {
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.first_block {
+    display: inline-flex;
+    justify-content: left;
+    align-items: center;
+}
+.operators{
+    display: flex;
+    flex-grow: 1;
+    gap: 40px;
+    margin-left: 40px;
+}
+
+.valor1, #op {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#op {
+    margin: 10px;
+}
+
+.valor2, #result {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#result {
+    margin: 10px;
+}

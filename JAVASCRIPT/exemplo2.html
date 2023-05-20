@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uma pagina Web</title>
+        <meta name="keywords" content="HTML, CSS, JS, Exemplo">
+        <meta name="description" content="Uma página Web">
+        <meta name="author" content="Krishna">
+        
+        <script>
+            function soma()
+            {
+                var numX = parseInt(document.getElementById("x").value);
+                var numY = parseInt(document.getElementById("y").value);
+                var total = numX + numY;
+                document.getElementById("p1").innerHTML = "O resultado eh: " + total;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            X:<br>
+            <input type="number" id="x" value="0">
+            <br>
+            Y:<br>
+            <input type="number" id="y" value="0">
+            <br>
+            <button type="button" onclick="soma()">somar</button>
+        </form>
+        <p id="p1">O resultado ainda nao foi calculado.</p>
+    </body>
+</html>

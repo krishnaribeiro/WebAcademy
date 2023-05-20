@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uma Pagina Web</title>
+        <meta name="keywords" content="HTML, CSS, JS, Exemplo">
+        <meta name="description" content="Uma Pagina Web">
+        <meta name="author" content="Krishna">
+
+        <link rel="stylesheet" href="calculadora.css">
+        <script>
+            let soma = function(){
+                var numX = parseInt(document.getElementById("x").value);
+                var numY = parseInt(document.getElementById("y").value);
+                var total = numX + numY
+                document.getElementById("op").innerHTML = '+'
+                document.getElementById("result").innerHTML = " = "+total;
+            }
+            let mult = () => {
+                let numX = parseInt(document.getElementById("x").value);
+                let numY = parseInt(document.getElementById("y").value);
+                let total = numX * numY
+                document.getElementById("op").innerHTML = '*'
+                document.getElementById("result").innerHTML = " = "+total;
+            }
+
+            let sub = () => {
+                let numX = parseInt(document.getElementById("x").value);
+                let numY = parseInt(document.getElementById("y").value);
+                let total = numX - numY
+                document.getElementById("op").innerHTML = '-'
+                document.getElementById("result").innerHTML = " = "+total;
+            }
+            function divi(){
+                var numX = parseInt(document.getElementById("x").value);
+                var numY = parseInt(document.getElementById("y").value);
+                var total = numX / numY
+                document.getElementById("op").innerHTML = '/'
+                document.getElementById("result").innerHTML = " = "+total;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div class="first_block">
+                <div>
+                    Valor 1: <br>
+                    <input type="number" id = "x" value ="0" class="valor1">
+                    <span id="op">operacao</span>
+                    
+                </div>
+                <div>
+                    Valor 2: <br>
+                    <input type="number" id="y" value="0" class="valor2"> 
+                    <span id="result">= resultado</span>
+                </div>
+                
+            </div>
+            <p>Selecione a operacao que deseja realizar:</p>
+            
+            <div class="operators">
+                <button type="button" onclick="soma()">+</button>
+                <button type="button" onclick="sub()">-</button>
+                <button type="button" onclick="mult()">*</button>
+                <button type="button" onclick="divi()">/</button>
+            </div>
+            
+        </form>
+        
+    </body>
+</html>
